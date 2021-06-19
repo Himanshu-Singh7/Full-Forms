@@ -1,0 +1,36 @@
+element.style {
+    padding: 5px;
+    
+}
+ ul, li, p, body, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    
+
+    
+    
+    
+} 
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    
+    
+}
+
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+
+    
+}
+form {
+    display: block;
+    margin-top: 1em;
+}
+
+
+

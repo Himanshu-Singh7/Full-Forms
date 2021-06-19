@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+* {
+  box-sizing: border-box;
+}
+
+header,
+section {
+  overflow-x: hidden;
+}
+
+ :root {
+  --Sniglet-font: "Sniglet", cursive;
+  --Rubik: "Rubik", cursive;
+  --Patua: "Patua One", cursive;
+  --Lobster: "lobster", cursive;
+  --light-black: #2e2c2caf;
+   --bggradient: linear-gradient(to bottom, #dd2476, #ff512f); 
+  --light-gray: rgba(255, 255, 255, 0.877);
+} 
+
+ header a {
+  font-family: var(--Sniglet-font);
+  font-size: 0.9em;
+  color: whitesmoke;
+} 
+
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+} 
+
+ .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}  
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .nav-item:last-child {
+  padding-right: 10.5em;
+} 
+
+header .nav-item {
+  padding: 0.9em;
+}
+
+header .navbar-brand {
+  padding-left: 8rem;
+}
+
+header .nav-link:hover {
+  color: black;
+}
+
+header .row .col-md-7 {
+  padding: 22vmin 1vmin;
+  padding-bottom: 35vmin;
+}
+
+header .row .col-md-5 {
+  padding: 4.2vmin 1vmin;
+}
+
+header .row .col-md-5 img {
+  width: 90%;
+}
+
+ header {
+   /* background:black;
+   fallback for old browsers  */
+  background: var(--bggradient);
+}  
+
+header .container .col-md-7 {
+  font-family: "Rubik", sans-serif;
+}
+
+header .container .col-md-7 h6 {
+  padding: 1vmin;
+  letter-spacing: 4px;
+}
+
+header .container .col-md-7 h1 {
+  font-size: 8.5vmin;
+  font-weight: bold;
+  padding: 0.1em 0em;
+}
+
+header .container .col-md-7 p {
+  padding: 1vmin 5vmin;
+}
+
+.primary-btn {
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/********** section 1 **************/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+ul {
+  list-style: none
+}
+
+a {
+  text-decoration: none
+}
+
+/* body {
+  background: #f9f9f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  color:white;
+} */
+
+.clear:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.svg-off {
+  position: absolute;
+  top: -9999px;
+  left: -9999px
+}
+
+svg:not(:root) {
+  overflow: hidden
+}
+
+.landing-section {
+  position: relative;
+  height: 100%;
+  height: 100vh;
+  width: 100%
+}
+
+.content-top {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  top: 23%;
+  left: 0;
+  right: 0;
+  z-index: 12
+}
+
+.content-top.sticky {
+  position: absolute;
+  top: auto;
+  bottom: 0
+}
+
+.wrapper {
+  position: relative;
+  padding: 0 7px
+}
+
+.logo-wrap {
+  width: 170px;
+  height: 130px;
+  margin: auto;
+  text-align: center
+}
+
+.logo-wrap img+img {
+  margin-top: 5px
+}
+
+.search-wrap {
+  padding: 1em .8em;
+  max-width: 630px;
+  min-width: 575px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 70%
+}
+
+ .search-form {
+  border-radius: 30px;
+  display: block;
+  position: relative;
+  height: 50px;
+  background-color: white;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, .05), 0 5px 8px rgba(0, 0, 0, .06);
+  padding-left: 30px;
+  padding-right: 64px;
+  font-size: 1.14em
+} 
+
+ .clear-button {
+  border: 0;
+  display: none;
+  font-size: 1.25em;
+  background-color:white;
+  position: absolute;
+  top: 4px;
+  right: 50px;
+  left: auto;
+  z-index: 2;
+  outline: none;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  text-align: center
+} 
+
+.active .clear-button {
+  display: inline-block
+}
+
+.shape-close {
+  width: 14px
+}
+
+.search-button {
+  border: 0;
+  display: inline-block;
+  font-size: 1.25em;
+  background-color:palevioletred;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  left: auto;
+  z-index: 2;
+  outline: none;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all .4s ease
+}
+
+.shape-search {
+  fill: #999;
+  width: 20px;
+  transition: all .4s ease
+}
+
+.active .search-button {
+  background-color: #00a2ff
+}
+
+.active .shape-search {
+  fill: #fff
+}
+
+.search-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1em;
+  font-weight: normal;
+  color: #333;
+  display: block;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  height: 50px;
+  z-index: 1
+}
+
+ .tag-home {
+  position: relative;
+  padding: 0 .8em;
+  margin: .4em auto .7em;
+  text-align: center;
+  color: white;
+}
+
+.tag-home h1 {
+  line-height: 1.4;
+  font-size: 1.25em;
+  margin: 0;
+  font-weight: 300
+} 
+
+ul.sindex {
+  text-align: center
+}
+
+ul.sindex li {
+  display: inline;
+  margin-right: 0px
+}
+
+ul.sindex li a {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  transition: all .25s linear
+}
+
+ul.sindex li a:hover {
+  background: #00a2ff;
+  color: #fff;
+  font-size: 10px;
+  transition: all 0s linear
+}
+
+
+
+
+
+
+
+ 
+/* ************** Section 2 *********** */
+
+
+
+/* *********Section 3*********** */
+
+
+
+/* *********Section Team ***************/
+
+
+
+.border-radius {
+  border-radius: 340px;
+  width: 60%;
+} 
+
+footer {
+  background: rgba(0, 0, 0, 0.815);
+  overflow-x: hidden;
+  padding: 14vmin 18vmin;
+}
+
+footer p > span {
+  color: #ff512f;
+}
+
+footer input {
+  border: none !important;
+}
+
+footer input::placeholder {
+  color: white !important;
+}
+
+footer .input-group .input-group-text {
+  background: var(--bggradient);
+  border: none;
+}
+
+footer .column i {
+  color: #dd2476;
+}
+
+/* It is Adjacent sibling combinator */
+
+footer .column i + i {
+  padding: 0 0.5em;
+}
+
+ .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.815);
+  z-index: 9999;
+  transition: all 1.5s ease;
+} 
+
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Project1/style.css">
+    <link rel="stylesheet" href="../Project1/Suggest.css">
+</head>
+<body>
+    
+    <!-- header -->
+    <header>
+        <div class="container-fluid p-0">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+              <i class="fas fa-book-reader fa-2x mx-3"></i>FullForms</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-align-right text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="mr-auto"></div>
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Project1/SuggestFullForms.html">Suggest to FullForms</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Feedback</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="dropdown">
+                    <a href="#" class="nav-link">Category</a>
+                    <div class="dropdown-content">
+                      <a href="#">Docter</a>
+                      <a href="#">Police</a>
+                    </div>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+        </div>
+    <!-- end header -->
+
+    <!-- section1 -->
+    <div></div>
+    <div class="content-wrap">
+        <div class="content">
+            <center>
+                <h1 style="padding:5px; color: #FFFFFF;">Suggest <span class="#FFFFFF"></span> to FullForms</h1>
+            </center>
+        </center>
+        <div style="text-align:center;font-size:11px;color:#FFFFFF;">Please use this form if you are sure that such acronym or abbreviation exists and widely known.<br>Please make sure that the information you suggest for database inclusion is correct and doesn't contain any errors.<br>All suggestions are
+            published only after a review and approval procedure.<br>Fields marked with blue asterisk
+            <font color="#FFFFFF" size="4"></font> are mandatory.</div><br>
+            
+            <div id="error_div"></div>
+            <form id="suggest_form" method="post">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td width="45%" align="right">Entry
+                                <font color="#FFFFFF"></font>
+                            </td>
+                            <td width="55%">
+                                <input data-validation="required" data-validation-error-msg="Required field" name="short" type="text" id="short" value="" maxlength="100" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Definition
+                                <font color="#FFFFFF"></font>
+                            </td>
+                            <td>
+                                <input data-validation="required" data-validation-error-msg="Required field" name="fullf" type="text" id="fullf" value="" maxlength="150" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="95" align="right">Description</td>
+                            <td>
+                                <textarea name="descr" id="textarea4" cols="26" rows="5"></textarea>
+                                <span id="desc_counter">500</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Main Category</td>
+                            <td>
+                                <select name="category1" id="category1">
+<option value=""></option>
+<option value=1>Academic & Science</option><option value=2>Animal Kingdom</option><option value=17>Arts</option><option value=15>Associations & Organizations</option><option value=3>Business</option><option value=4>Computing</option><option value=11>Governmental</option><option value=5>Medical</option><option value=6>Miscellaneous</option><option value=7>News & Entertainment</option><option value=13>Not Sure</option><option value=8>Regional</option><option value=14>Society & Culture</option><option value=16>Sports & Games</option><option value=12>Stock Exchanges</option><option value=9>Technology</option><option value=10>Transport & Travel</option><option value=18>Trees & Plants</option> </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Subcategory</td>
+                            <td>
+                                <select name="category2" id="category2">
+</select>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td align="right">Country/Region</td>
+                            <td>
+                                <select name="region" id="region">
+<option value="WW" selected="selected">Worldwide (Global)</option>
+<option value=AF>Afghanistan</option><option value=AX>Aland Islands</option><option value=AL>Albania</option><option value=DZ>Algeria</option><option value=AS>American Samoa</option><option value=AD>Andorra</option><option value=AO>Angola</option><option value=AI>Anguilla</option><option value=AQ>Antarctica</option><option value=AG>Antigua And Barbuda</option><option value=AR>Argentina</option><option value=AM>Armenia</option><option value=AW>Aruba</option><option value=AU>Australia</option><option value=AT>Austria</option><option value=AZ>Azerbaijan</option><option value=BS>Bahamas</option><option value=BH>Bahrain</option><option value=BD>Bangladesh</option><option value=BB>Barbados</option><option value=BY>Belarus</option><option value=BE>Belgium</option><option value=BZ>Belize</option><option value=BJ>Benin</option><option value=BM>Bermuda</option><option value=BT>Bhutan</option><option value=BO>Bolivia</option><option value=BA>Bosnia And Herzegovina</option><option value=BW>Botswana</option><option value=BV>Bouvet Island</option><option value=BR>Brazil</option><option value=IO>British Indian Ocean Territory</option><option value=BN>Brunei</option><option value=BG>Bulgaria</option><option value=BF>Burkina Faso</option><option value=BI>Burundi</option><option value=KH>Cambodia</option><option value=CM>Cameroon</option><option value=CA>Canada</option><option value=CV>Cape Verde</option><option value=KY>Cayman Islands</option><option value=CF>Central African Republic</option><option value=TD>Chad</option><option value=CL>Chile</option><option value=CN>China</option><option value=CX>Christmas Island</option><option value=CC>Cocos [keeling] Islands</option><option value=CO>Colombia</option><option value=KM>Comoros</option><option value=CG>Congo-Brazzavill</option><option value=CD>Congo-Kinshasa</option><option value=CK>Cook Islands</option><option value=CR>Costa Rica</option><option value=HR>Croatia</option><option value=CU>Cuba</option><option value=CY>Cyprus</option><option value=CZ>Czech Republic</option><option value=DK>Denmark</option><option value=DJ>Djibouti</option><option value=DM>Dominica</option><option value=DO>Dominican Republic</option><option value=EC>Ecuador</option><option value=EG>Egypt</option><option value=SV>El Salvador</option><option value=GQ>Equatorial Guinea</option><option value=ER>Eritrea</option><option value=EE>Estonia</option><option value=ET>Ethiopia</option><option value=EU>European Union</option><option value=FK>Falkland Islands</option><option value=FO>Faroe Islands</option><option value=FJ>Fiji</option><option value=FI>Finland</option><option value=FR>France</option><option value=GF>French Guiana</option><option value=PF>French Polynesia</option><option value=TF>French Southern Territories</option><option value=GA>Gabon</option><option value=GM>Gambia</option><option value=GE>Georgia</option><option value=DE>Germany</option><option value=GH>Ghana</option><option value=GI>Gibraltar</option><option value=GR>Greece</option><option value=GL>Greenland</option><option value=GD>Grenada</option><option value=GP>Guadeloupe</option><option value=GU>Guam</option><option value=GT>Guatemala</option><option value=GG>Guernsey</option><option value=GN>Guinea</option><option value=GW>Guinea Bissau</option><option value=GY>Guyana</option><option value=HT>Haiti</option><option value=HM>Heard Island And Mcdonald Islands</option><option value=VA>Holy See (vatican City State)</option><option value=HN>Honduras</option><option value=HK>Hong Kong</option><option value=HU>Hungary</option><option value=IS>Iceland</option><option value=IN>India</option><option value=ID>Indonesia</option><option value=IR>Iran</option><option value=IQ>Iraq</option><option value=IE>Ireland</option><option value=IM>Isle of Man</option><option value=IL>Israel</option><option value=IT>Italy</option><option value=CI>Ivory Coast</option><option value=JM>Jamaica</option><option value=JP>Japan</option><option value=JE>Jersey</option><option value=JO>Jordan</option><option value=KZ>Kazakhstan</option><option value=KE>Kenya</option><option value=KI>Kiribati</option><option value=XK>Kosovo</option><option value=KW>Kuwait</option><option value=KG>Kyrgyzstan</option><option value=LA>Lao Peoples Democratic Republic</option><option value=LV>Latvia</option><option value=LB>Lebanon</option><option value=LS>Lesotho</option><option value=LR>Liberia</option><option value=LY>Libya</option><option value=LI>Liechtenstein</option><option value=LT>Lithuania</option><option value=LU>Luxembourg</option><option value=MO>Macao</option><option value=MK>Macedonia</option><option value=MG>Madagascar</option><option value=MW>Malawi</option><option value=MY>Malaysia</option><option value=MV>Maldives</option><option value=ML>Mali</option><option value=MT>Malta</option><option value=MH>Marshall Islands</option><option value=MQ>Martinique</option><option value=MR>Mauritania</option><option value=MU>Mauritius</option><option value=YT>Mayotte</option><option value=MX>Mexico</option><option value=FM>Micronesia</option><option value=MD>Moldova</option><option value=MC>Monaco</option><option value=MN>Mongolia</option><option value=ME>Montenegro</option><option value=MS>Montserrat</option><option value=MA>Morocco</option><option value=MZ>Mozambique</option><option value=MM>Myanmar</option><option value=NA>Namibia</option><option value=NR>Nauru</option><option value=NP>Nepal</option><option value=NL>Netherlands</option><option value=NC>New Caledonia</option><option value=NZ>New Zealand</option><option value=NI>Nicaragua</option><option value=NE>Niger</option><option value=NG>Nigeria</option><option value=NU>Niue</option><option value=NF>Norfolk Island</option><option value=KP>North Korea</option><option value=MP>Northern Mariana Islands</option><option value=NO>Norway</option><option value=OM>Oman</option><option value=PK>Pakistan</option><option value=PW>Palau</option><option value=PS>Palestinian Territory</option><option value=PA>Panama</option><option value=PG>Papua New Guinea</option><option value=PY>Paraguay</option><option value=PE>Peru</option><option value=PH>Philippines</option><option value=PN>Pitcairn</option><option value=PL>Poland</option><option value=PT>Portugal</option><option value=PR>Puerto Rico</option><option value=QA>Qatar</option><option value=RE>Reunion</option><option value=RO>Romania</option><option value=RU>Russian Federation</option><option value=RW>Rwanda</option><option value=BL>Saint Barthelemy</option><option value=SH>Saint Helena, Ascension And Tristan Da Cunha</option><option value=KN>Saint Kitts And Nevis</option><option value=LC>Saint Lucia</option><option value=MF>Saint Martin</option><option value=PM>Saint Pierre And Miquelon</option><option value=VC>Saint Vincent And The Grenadines</option><option value=WS>Samoa</option><option value=SM>San Marino</option><option value=ST>Sao Tome And Principe</option><option value=SA>Saudi Arabia</option><option value=SN>Senegal</option><option value=RS>Serbia</option><option value=SC>Seychelles</option><option value=SL>Sierra Leone</option><option value=SG>Singapore</option><option value=SX>Sint Maarten</option><option value=SK>Slovakia</option><option value=SI>Slovenia</option><option value=SB>Solomon Islands</option><option value=SO>Somalia</option><option value=ZA>South Africa</option><option value=GS>South Georgia And The South Sandwich Islands</option><option value=KR>South Korea</option><option value=SS>South Sudan</option><option value=SU>Soviet Union</option><option value=ES>Spain</option><option value=LK>Sri Lanka</option><option value=SD>Sudan</option><option value=SR>Suriname</option><option value=SJ>Svalbard And Jan Mayen</option><option value=SZ>Swaziland</option><option value=SE>Sweden</option><option value=CH>Switzerland</option><option value=SY>Syrian Arab Republic</option><option value=TW>Taiwan</option><option value=TJ>Tajikistan</option><option value=TZ>Tanzania</option><option value=TH>Thailand</option><option value=TL>Timor-leste</option><option value=TG>Togo</option><option value=TK>Tokelau</option><option value=TO>Tonga</option><option value=TT>Trinidad And Tobago</option><option value=TN>Tunisia</option><option value=TR>Turkey</option><option value=TM>Turkmenistan</option><option value=TC>Turks And Caicos Islands</option><option value=TV>Tuvalu</option><option value=UG>Uganda</option><option value=UA>Ukraine</option><option value=AE>United Arab Emirates</option><option value=GB>United Kingdom</option><option value=UN>United Nations</option><option value=US>United States</option><option value=UM>United States Minor Outlying Islands</option><option value=UY>Uruguay</option><option value=UZ>Uzbekistan</option><option value=VU>Vanuatu</option><option value=VE>Venezuela</option><option value=VN>Vietnam</option><option value=VG>Virgin Islands, British</option><option value=VI>Virgin Islands, U.S.</option><option value=WF>Wallis And Futuna</option><option value=EH>Western Sahara</option><option value=WW>Worldwide</option><option value=YE>Yemen</option><option value=ZM>Zambia</option><option value=ZW>Zimbabwe</option> </select>
+                            </td>
+                        </tr>
+                        <tr> -->
+                            <td align="right">Reference URL/Source URL</td>
+                            <td><input type="text" name="ref" maxlength="250" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Your Name</td>
+                            <td><input type="text" name="name" maxlength="150" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Your Email
+                                <font color="#FFFFFF"></font>
+                            </td>
+                            <td>
+                                <input data-validation="email" data-validation-help="(Your Name and Email will not be published)" type="text" name="email" id="text2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="grecap">
+                                <div class="g-recaptcha" data-sitekey="6LcvyVQUAAAAAO-SKQQW4PHK31KcIaNRJnSQn3_e" data-callback="recapCallback"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right"></td>
+                            <td><input name="suggest_form" type="submit" value="Suggest" /></td>
+                            <font color="#FFFFFF"></font>
+                        </tr>
+                    </tbody>
+                </table>
+                 <center>
+                   <div class="loading-bar">
+                    <img src="">
+                </div>
+            </center> 
+            </form>
+            <a class="suggest-btn" style="display:none;width: 170px;" href="#suggest_pop">Suggest another Full Form</a>
+        </div>  
+    
+        
+
+    <!--end section1  -->
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid p-0">
+          <div class="row text-left">
+            <div class="col-md-5 col-sm-5">
+              <h4 class="text-light">About us</h4>
+              <p class="text-muted">FullForms is one of the world’s best online source for abbreviations and full forms, where we strive to give you an accurate, user-friendly, and top most search experience. All of us have different areas of interest and various orbits of expertise. We appreciate this expertise of our users in different domains and project FullForms as a platform and be part of this human edited website. We always value your suggestions and would like to hear from you.</p>
+              <p class="pt-4 text-muted">Copyright @2021 All rights reserved | This template is made with by
+                <span> Himanshu Singh</span>
+              </p>
+            </div>
+            <div class="col-md-5 col-sm-12">
+              <h4 class="text-light">Contact Us</h4>
+            
+              <form class="form-inline">
+                <div class="col pl-0">
+                  <div class="input-group pr-5">
+                    <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2"
+                      placeholder="Email">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-2 col-sm-12">
+              <h4 class="text-light">Follow Us</h4>
+              <!-- <p class="text-muted">Let us be social</p> -->
+              <div class="column text-light">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- endfooter -->
+
+</body>
+</html>
